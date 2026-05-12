@@ -1,0 +1,8 @@
+[variables]
+    PHP_IS_VERIFIED = "true"
+
+[phases.setup]
+    nixPkgs = ["...", "php84"] # Pastikan pakai PHP 8.4 sesuai diskusi tadi
+
+[start]
+    cmd = "php artisan serve --host 0.0.0.0 --port $PORT"
