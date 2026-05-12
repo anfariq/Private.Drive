@@ -1,8 +1,9 @@
-[variables]
-    PHP_IS_VERIFIED = "true"
-
 [phases.setup]
-    nixPkgs = ["...", "php84"] # Pastikan pakai PHP 8.4 sesuai diskusi tadi
+    nixPkgs = ["php84", "php84Packages.composer"]
 
-[start]
-    cmd = "php artisan serve --host 0.0.0.0 --port $PORT"
+[phases.build]
+    cmds = ["composer install --optimize-autoloader --no-dev --no-interaction"]
+
+[variables]
+    NIXPACKS_PHP_FALLBACK_VERSION = "8.4"
+    NIXPACKS_PHP_VERSION = "8.4"
