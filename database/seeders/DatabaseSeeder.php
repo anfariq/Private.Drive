@@ -19,12 +19,12 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::create([
-            'name' => 'Andi',
-            'email' => 'andi@drive.Super',
-            'password' => Hash::make('Regina123'), // Ganti dengan password yang kamu inginkan
+            'name' => 'Yourname',
+            'email' => 'Youremail',
+            'password' => Hash::make('Yourpassword'), // Ganti dengan password yang kamu inginkan
             'role' => 'admin',
             'is_verified' => true, // Di Postgres gunakan boolean true
-            'storage_limit' => 200, // Sesuai gambar: 200 GB
+            'storage_limit' => 200, 
             'email_verified_at' => '2026-04-08 13:34:18',
         ]);
     }
